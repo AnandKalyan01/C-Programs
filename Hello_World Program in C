@@ -1,0 +1,9 @@
+#include<stdio.h> //Header files 
+#include<conio.h> 
+
+void main ()  // Main Function
+{
+ printf("Hello World !") ;
+
+getch();
+}
