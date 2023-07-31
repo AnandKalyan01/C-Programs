@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main () {
+    float a , b , c , d  ;
+    a = 2.5 ;
+    b = 5.0 ;
+    
+    printf("Enter value of c") ;
+    scanf("%f" , &c ) ;
+    printf("Enter value of d") ;
+    scanf("%f" , &d ) ;
+
+// In float datatype , we use format specifier "%f" and ".2f ( means decimal values upto 2 zeroes after the decimal )"    
+
+    printf("This is the addition of a & b  %.2f \n" , a + b) ;         
+    printf("This is the substraction  of a & b %.2f \n" , b - a ) ;    
+    printf("This is the multiplication  of a & b %.2f \n" , a * b ) ;  
+    // printf("This is the divide %f \n" , a % b ) ; (  We can't use this operator on float and float )
+
+    printf("This is the addition of c & d %f \n" , c + d) ;         
+    printf("This is the substraction of c & d %f \n" , c - d ) ;    
+    printf("This is the multiplication of c & d %f \n" , c * d ) ;  
+}
