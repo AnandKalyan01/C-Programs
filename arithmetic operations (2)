@@ -1,0 +1,18 @@
+// In this Program , we have demonstrated that how we can use arithmetic operations on variables with user-defined value as input in the program . 
+#include<stdio.h>
+
+int main () {
+
+    int a , b ;
+    printf("Enter value of a \n") ;
+    scanf("%d" , &a) ;
+    printf("Enter value of b \n") ;
+    scanf("%d" , &b) ;
+
+    printf("This is the addition %d \n" , a + b) ;         // "+ operator"
+    printf("This is the substraction %d \n" , b - a ) ;    // "- operator"
+    printf("This is the multiplication %d \n" , a * b ) ;  // "* operator"
+    printf("This is the divide %d \n" , a % b ) ;          // "% operator"
+
+
+}
