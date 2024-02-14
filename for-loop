@@ -1,0 +1,11 @@
+/* Print the "Hello world" message 100 times, we use the concepts of loops */
+
+
+#include<stdio.h>
+/* int main(void) {
+ 
+  // for(intitalization [int i = 0] ; conditionals [i < or > or >= or <= count] ; increment or decrement operator]
+  for(int i = 0 ; i < 100 ; i++) {
+    printf("Hello world");
+  } 
+*/
