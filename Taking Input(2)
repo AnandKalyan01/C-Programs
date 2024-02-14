@@ -1,9 +1,0 @@
-#include<stdio.h>
-
-void main () {
- float d ;
- printf("Enter the decimal value" ) ;
- scanf("%f" , &d ) ;
- printf("Given Value %f" ) ;
-
-}
