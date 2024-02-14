@@ -1,9 +1,6 @@
-#include<stdio.h> //Header files 
-#include<conio.h> 
+#include<stdio.h> // header file 
 
-void main ()  // Main Function
-{
- printf("Hello World !") ;
-
-getch();
+// main function
+int main(void) {
+     printf("Hello world") ;
 }
