@@ -1,11 +1,14 @@
-/* Print the "Hello world" message 100 times, we use the concepts of loops */
-
+// Print the 'this is github ' for n times 
 
 #include<stdio.h>
-/* int main(void) {
- 
-  // for(intitalization [int i = 0] ; conditionals [i < or > or >= or <= count] ; increment or decrement operator]
-  for(int i = 0 ; i < 100 ; i++) {
-    printf("Hello world");
-  } 
-*/
+
+int main(void) {
+       int n ;
+       printf("Enter value for n ");
+       scanf("%d" , &n);
+               // loop used below to do this reptitive task 
+            for(int i = 0 ; i < n ; i++)
+             {
+                printf("this is github \n");
+             }
+}
