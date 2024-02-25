@@ -1,0 +1,46 @@
+#include<stdio.h>
+void swap(int *x , int *y); 
+void selection_sort(int arr[] , int n); 
+void print(int arr[] , int size); 
+
+// Main function, the starting point of program execution.
+int main(void) {
+    int arr[] = {12,23,43,64,31,22}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+    selection_sort(arr , n ); 
+    printf("Sorted array : \n"); 
+    print(arr , n ) ; 
+}
+
+// Function to swap two integers.
+void swap(int *x , int *y) {
+    int temp = *x ; 
+    *x = *y ; 
+    *y = temp ; 
+// Function to perform selection sort on an array.
+void selection_sort(int arr[] , int n) {
+    int mid ; // Declare a variable for storing the index of the minimum element.
+    for (int i = 0; i < n ; i++) // Iterate over the array.
+    {
+        mid = i ; // Assume the current index as the minimum.
+        for (int j = i + 1 ; j < n; j++) // Iterate over the unsorted part of the array.
+        {   
+            if (arr[j] < arr[mid]) // Find the index of the minimum element.
+            {
+                mid = j ; // Update the index of the minimum element.
+            }
+            if (mid != i) // If the minimum element is found.
+            {
+                swap(&arr[mid] , &arr[i]) ; // Swap the minimum element with the first element.
+            }       
+        }
+    }
+}
+
+// Function to print an array.
+void print(int arr[] , int size) {
+    for (int i = 0; i < size ; i++) // Iterate over the array.
+    {
+        printf("%d " , arr[i]); // Print each element of the array.
+    }
+}
