@@ -1,0 +1,72 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct node
+{
+    int number;
+    struct node *next;
+} node;
+
+int main(int argc, char *argv[])
+{
+    if (argc < 2)
+    {
+        printf("Usage: %s <numbers...>\n", argv[0]);
+        return 1;
+    }
+
+    node *list = NULL;
+
+    for (int i = 1; i < argc; i++)
+    {
+        int number = atoi(argv[i]);
+
+        node *n = malloc(sizeof(node));
+        if (n == NULL)
+        {
+            // Free previously allocated memory
+            while (list != NULL)
+            {
+                node *temp = list;
+                list = list->next;
+                free(temp);
+            }
+            return 1;
+        }
+
+        n->number = number;
+        n->next = NULL;
+
+        if (list == NULL || n->number < list->number)
+        {
+            n->next = list;
+            list = n;
+        }
+        else
+        {
+            node *ptr = list;
+            while (ptr->next != NULL && n->number > ptr->next->number)
+            {
+                ptr = ptr->next;
+            }
+            n->next = ptr->next;
+            ptr->next = n;
+        }
+    }
+
+    // Print the list
+    for (node *ptr = list; ptr != NULL; ptr = ptr->next)
+    {
+        printf("%i\n", ptr->number);
+    }
+
+    // Free allocated memory
+    while (list != NULL)
+    {
+        node *temp = list;
+        list = list->next;
+        free(temp);
+    }
+
+    return 0;
+}
